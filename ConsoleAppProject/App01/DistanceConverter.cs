@@ -12,7 +12,7 @@ namespace ConsoleAppProject.App01
     {
         public void feetToMiles()
         {
-            //step 1- input the feet
+            //step 2- input the feet
             Console.WriteLine("Enter the number of Feet:");
             string input = Console.ReadLine();
             int feet = Convert.ToInt32(input);
