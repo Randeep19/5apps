@@ -37,7 +37,6 @@ namespace ConsoleAppProject.App01
         }
    
 
-
         public void Input()
         {
 
