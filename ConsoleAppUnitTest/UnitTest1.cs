@@ -37,7 +37,7 @@ namespace ConsoleAppUnitTest
 
             converter.ConvertDistance();
 
-             expectedOutput = 10560;
+            expectedOutput = 10560;
 
             Assert.AreEqual(expectedOutput, converter.toDistance);
 
