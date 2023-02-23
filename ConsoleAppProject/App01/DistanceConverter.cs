@@ -3,7 +3,8 @@
 namespace ConsoleAppProject.App01
 {
     /// <summary>
-    /// Please describe the main features of this App
+    /// This class will convert distncew unit. It allow users to 
+    /// select the from to unit and then will calculate distance from the distance.
     /// </summary>
     /// <author>
     /// Derek version 0.1
@@ -13,10 +14,10 @@ namespace ConsoleAppProject.App01
         const int MILES_TO_FEET = 5280;
       
 
-        double fromDistance;
-        double toDistance;
-        string fromUnit;
-        string toUnit;
+       public double fromDistance;
+       public double toDistance;
+        public string fromUnit;
+        public string toUnit;
 
 
 
