@@ -60,5 +60,10 @@ namespace ConsoleAppProject.App01
             // Console.WriteLine(feet + " feet is " + miles.ToString("0.00") + " miles ");
             Console.WriteLine(fromDistance + "  " + fromUnit + " is " + toDistance + " " + toUnit);
         }
+
+        public void Calculate()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

@@ -1,0 +1,28 @@
+﻿@page
+@model Web.Pages.Distance_ConverterModel
+@using ConsoleAppProject.App01;
+@{
+}
+<form method="post">
+   <p>
+    <h2>Slelect the FROM Unit</h2>
+    <select asp-for="App01.fromUnit">
+      <option>@DistanceUnits.Feet</option>
+      <option>@DistanceUnits.Miles</option>
+    </select>
+   </p>
+    <h2> select the FROM distance</h2>
+    <input type="text" asp-for="App01.fromDistance" />
+
+
+   <p>
+    <h2>Slelect the To Unit</h2>
+    <select asp-for="App01.toUnit">
+        <option>@DistanceUnits.Feet</option>
+        <option>@DistanceUnits.Miles</option>
+    </select>
+   </p>
+   
+
+    <button class="btn btn-success" type="submit">Calculate</button>
+</form>
