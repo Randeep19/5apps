@@ -18,19 +18,32 @@ namespace ConsoleAppProject
     {
         public static void Main(string[] args)
         {
-            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.ForegroundColor = ConsoleColor.DarkCyan;
 
             Console.WriteLine();
             Console.WriteLine(" =================================================");
             Console.WriteLine("    BNU CO453 Applications Programming 2022-2023! ");
             Console.WriteLine(" =================================================");
             Console.WriteLine();
-
+            Console.WriteLine();
+            Console.WriteLine("    -- DISTANCE CONVERTER --      ");
+            Console.WriteLine();
+            
             DistanceConverter converter = new DistanceConverter();
             converter.Run();
 
-            BMI conversion= new BMI();
-            conversion.Run();
+            
+            Console.WriteLine();
+            Console.WriteLine();
+            Console.WriteLine();
+            Console.WriteLine("   -- BMI or BODY MASS INDEX --     ");
+            Console.WriteLine();
+            
+            BMI conversion = new BMI();
+            conversion.run();
         }
+
+   
+        
     }
 }

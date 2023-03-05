@@ -11,16 +11,14 @@ namespace ConsoleAppProject.App01
     /// </author>
     public class DistanceConverter
     {
-        const int MILES_TO_FEET = 5280;
-      
-
+       const int MILES_TO_FEET = 5280;
        public double fromDistance;
        public double toDistance;
-        public string fromUnit;
-        public string toUnit;
-
-
-
+        
+       public string fromUnit;
+       public string toUnit;
+       public string toUnit1;
+        
         public DistanceConverter()
         {
 
@@ -28,24 +26,32 @@ namespace ConsoleAppProject.App01
         
         public void Run()
         {
-            
             fromUnit = "feet";
             toUnit = "miles";
+            toUnit1 = "meters";
 
             Input();
             ConvertDistance();
             print();
-        }
-   
+            
+            Input2();
+            ConvertDistance2();
+            printoutput2();
 
+            FEET_TO_METERS();
+            MILES_TO_METERS();  
+        }
+
+        //CONVERTING FEET TO MILES;
         public void Input()
         {
-
-            Console.WriteLine("Please enter the number of " + fromUnit);
+            //Input the number the number of Feet;
+            Console.Write(" ~ Please enter the number of " + fromUnit + ": ");
             fromDistance = Convert.ToDouble(Console.ReadLine());
         }
         public void ConvertDistance()
         {
+            //convert the distance from feet to miles;
             if (fromUnit == "miles" && toUnit =="feet")
             {
                 toDistance = fromDistance * MILES_TO_FEET;
@@ -57,13 +63,75 @@ namespace ConsoleAppProject.App01
         }
         public void print()
         {
+            //print the output;
             // Console.WriteLine(feet + " feet is " + miles.ToString("0.00") + " miles ");
-            Console.WriteLine(fromDistance + "  " + fromUnit + " is " + toDistance + " " + toUnit);
+            Console.Write(" " + fromDistance + "  " + fromUnit + " is " + toDistance.ToString("0.00") + " " + toUnit + ".");
+            Console.WriteLine();
         }
 
-        public void Calculate()
+
+
+
+        //CONVERTING THE MILES TO FEET;
+        public void Input2()
         {
-            throw new NotImplementedException();
+            //Input the number the number of Miles;
+            Console.Write(" ~ Please enter the number of " + toUnit + ": ");
+            fromDistance = Convert.ToDouble(Console.ReadLine());
         }
+        public void ConvertDistance2()
+        {
+            //convert the distance from miles to Feet;
+            if (fromUnit == "miles" && toUnit == "feet")
+            {
+                toDistance = fromDistance / MILES_TO_FEET;
+            }
+            else if (fromUnit == "feet" && toUnit == "miles")
+            {
+                toDistance = fromDistance * MILES_TO_FEET;
+            }
+        }
+        public void printoutput2()
+        {
+            //print the output;
+            // Console.Write(feet + " feet is " + miles.ToString("0.00") + " miles ");
+            Console.WriteLine(" " + fromDistance + "  " + toUnit + " is " + toDistance + " " + fromUnit + ".");
+            Console.WriteLine();
+        }
+
+
+        //CONVERTING FEET TO METERS;
+        public void FEET_TO_METERS()
+        {
+            double feet, meters;
+
+            Console.Write(" ~ Please enter the number of feet: ");
+            feet = Convert.ToDouble(Console.ReadLine());
+
+            //convert the distance from feet to meters;
+            meters = feet * 0.3048;
+
+            // Console.Write(feet + " feet is " + miles.ToString("0.00") + " miles ");
+            Console.WriteLine(" " + fromDistance + "  " + fromUnit + " is " + meters + " " + toUnit1 + ".");
+            Console.WriteLine();
+        }
+        
+
+        //CONVERTING MILES TO METERS;
+        public void MILES_TO_METERS()
+        {
+            double miles, meters;
+
+            Console.Write(" ~ Please enter the number of miles: ");
+            miles = Convert.ToDouble(Console.ReadLine());
+
+            //convert the distance from miles to meters;
+            meters = miles * 1609.34;
+
+            // Console.Write(feet + " feet is " + miles.ToString("0.00") + " miles ");
+            Console.WriteLine(" " + fromDistance + "  " + toUnit + " is " + meters + " " + toUnit1 + ".");
+            Console.WriteLine();
+        }
+
     }
 }
